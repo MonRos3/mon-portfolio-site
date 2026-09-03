@@ -53,7 +53,10 @@ build.py          # Build script
 
 ## Fonts
 
-This project uses [Inter](https://github.com/rsms/inter) by Rasmus Andersson, licensed under the SIL Open Font License 1.1. See [content/fonts/LICENSE.txt](content/fonts/LICENSE.txt).
+This project uses two self-hosted fonts from [Fontsource](https://fontsource.org/), no CDN:
+
+- [Roboto](https://github.com/googlefonts/roboto-classic) by Google, licensed under the SIL Open Font License 1.1. See [content/fonts/LICENSE-Roboto.txt](content/fonts/LICENSE-Roboto.txt).
+- [Source Serif 4](https://github.com/adobe-fonts/source-serif) by Adobe (Frank Grießhammer), licensed under the SIL Open Font License 1.1. See [content/fonts/LICENSE-Source-Serif-4.txt](content/fonts/LICENSE-Source-Serif-4.txt).
 
 ## Using This For Your Own Site
 
