@@ -1,11 +1,11 @@
 title: Resume
-date: 2024-03-24
-modified: 2026-03-29
+date: 2026-09-02
+modified: 2026-09-02
 status: published
 
 # Resume
 
-Platform Engineer · Denver, CO · Open to Remote or On-Site
+Software Developer · Security Practitioner · Denver, CO · Open to Remote, Hybrid, or On-Site
 
 **Preferred Locations:** Denver, CO · Boulder, CO · Chicago, IL · Poland (Warsaw, Kraków, Trójmiasto, Wrocław)
 
@@ -13,9 +13,11 @@ Platform Engineer · Denver, CO · Open to Remote or On-Site
 
 ## Summary
 
-Platform Engineer designing and operating a multi-tenant Kubernetes platform serving 14 organizations with 300GB+ daily log ingestion. 3+ years building production infrastructure, CI/CD pipelines (ArgoCD, GitOps), and observability systems (OpenTelemetry, Dynatrace) on DigitalOcean and AWS. Built zero-trust networking, SOC platform architecture, and internal developer tooling from the ground up. GICSP, CySA+, PenTest+ certified.
+Computer science honors graduate and former web development business owner (3 years) moving into application
+security; reviewing code with the eye of someone who has built and maintained it. Author of open-source LLM security
+tooling presented at the NAIRR Pilot Annual Meeting, with hands-on detection experience across 12 partner institutions.
 
-**Languages:** English (Native) · Polish (B1)
+**Languages:** English (Native)
 
 ---
 
@@ -24,143 +26,115 @@ Platform Engineer designing and operating a multi-tenant Kubernetes platform ser
 **Languages:**
 Python · Rust · Bash · PowerShell
 
-**Cloud & Infra:**
-AWS · Azure · DigitalOcean · OpenTofu (Terraform) · GitOps · Kubernetes (DOKS/k3s) · Docker · Podman · KubeVirt · Helm · ArgoCD
+**Languages/Frameworks:**
+Python · Bash · JavaScript · SQL · React · Node.js · Express.js · Flask · Streamlit · REST APIs
 
-**Networking:**
-Gateway API · Envoy Gateway · CoreDNS · cert-manager · ingress-nginx
+**AI/ML:**
+RAG pipelines · LLM integration · LangChain · LangGraph · YAML-based agent orchestration
 
-**Security:**
-Splunk · Suricata · Keycloak (OIDC) · WireGuard · SIEM · Zero-Trust Networks · Vulnerability Assessment
+**Security/Detection:**
+OpenSearch/ELK · Suricata · KQL · Splunk · threat modeling · vulnerability analysis · secure code review
 
-**Monitoring:**
-Dynatrace · OpenTelemetry · Fluent-Bit · Syslog · Auditd
-
-**Databases:**
-PostgreSQL · MySQL · OpenSearch
-
-**Operating Systems:**
-Linux · FreeBSD · Windows Server · Active Directory
+**Databases/Infra/DevOps:**
+MongoDB · ChromaDB · PostgreSQL · SQLite · Docker · Git/GitHub
 
 ---
 
 ## Professional Experience
 
-### Cybersecurity Platform Architect
+### Full Stack Developer
 
-**The Cybersecurity Center, MSU Denver** · Denver, CO · *October 2023 - Present*
+**The Sustainability Hub, MSU Denver** · Denver, CO · _May 2025 - May 2026_
 
-- Designed and deployed a SOC platform at a public US university, serving 14 partners and ingesting 300GB+ daily
-- Built multi-tenant DigitalOcean infrastructure with OpenTofu (Terraform), Kubernetes, cert-manager, and ArgoCD
-- Migrated cluster ingress from ingress-nginx to Kubernetes Gateway API, improving multi-tenant traffic isolation
-- Deployed OpenSearch, Keycloak (SSO/RBAC), and Zammad as GitOps-managed SOC services on Kubernetes
-- Implemented zero-trust connectivity via WireGuard VPN, backhauling partner traffic to central infrastructure
-- Developed a Rust API (Actix Web) serving on-cluster ML models to generate and evaluate analyst training exercises
-- Built internal developer platform with OpenTelemetry observability; mentored student engineers on monitoring
-- Led monthly hands-on DevOps and cloud workshops for students
+- Developed and maintained a MERN-stack platform (MongoDB, Express, React, Node.js), including an end-to-end
+  RAG chatbot (Python, LangChain, MongoDB), that opens environmental datasets to researchers and policymakers
+- Engineered secure API endpoints with Firebase authentication and access control; identified and remediated a
+  CORS misconfiguration vulnerability
+- Applied secure coding practices throughout the lifecycle; input validation, auth mechanisms, and code reviews
 
-### Technical Product Specialist
-**Dynatrace** · Denver, CO · *June 2023 - December 2023*
+### Lead Student Cybersecurity Analyst
 
-- Completed Dynatrace's 6-month Professional Development Program (PDP 368); earned Dynatrace Associate certification and Autonomous Cloud Endorsement
-- Supported enterprise clients in configuring Dynatrace across AWS (CloudWatch, Lambda, Fargate), Azure, hybrid Windows Server deployments, and Kubernetes environments
-- Guided customers through CI/CD pipeline monitoring, real user monitoring (RUM), and platform troubleshooting
-- Built custom dashboards and alerting frameworks for application performance monitoring
-- Demoed a Jenkins CI/CD pipeline deploying a containerized multiplayer Snake game to Kubernetes, instrumented with Dynatrace
+**The Cybersecurity Center, MSU Denver** · Denver, CO · _June 2023 - June 2025_
 
-### Student Web Content Designer
-**Classroom to Career Hub, MSU Denver** · Denver, CO · *July 2021 - March 2022*
+- Led Tier 2 security operations across 12 municipal/education partners; triaged Suricata alerts in OpenSearch
+- Authored KQL detections, investigated policy violations, and managed ticket escalations
+- Trained 140+ student analysts on log analysis, threat detection, and ELK-style workflows
+- Wrote bi-monthly security newsletters for 1,300+ recipients
 
-- Automated website migration with a custom Python web scraper
-- Refactored JavaScript calendar plugins for Wordpress integration
+### Data Science Intern
 
-### Desktop Support Technician
-**Frontier Airlines** · Denver, CO · *February 2021 - July 2021*
+**The Data Mine, Purdue University** · Remote · _August 2024 - January 2025_
 
-- Operated as sole Tier 1 support engineer for corporate office, onboarding 20+ employees weekly and resolving escalated tickets
-- Automated user account provisioning and administrative workflows with PowerShell
-- Standardized corporate workstation deployments with a golden Microsoft Surface image
+- Researched anomaly-detection methods for SPACE ISAC to improve threat identification for space systems
+- Built Python pipelines to aggregate and process OSINT into actionable intelligence
+- Analyzed datasets and presented recommendations to SPACE ISAC partners
 
-### Technology Specialist
-**Cherry Creek School District** · Aurora, CO · *January 2019 - August 2020*
+### Learning Assistant, Computer Science 1 (CS1050)
 
-- Automated OS imaging and deployment across 2,000+ systems using SCCM, Microsoft Intune, and PDQ Deploy
-- Identified and remediated a critical Active Directory privilege escalation vulnerability
-- Built custom asset tracking system, replacing manual inventory processes
+**MSU Denver, Computer Science Dept** · Denver, CO · _September 2023 - December 2023_
 
-### Computer Specialist
-**Stillwater Public Schools** · Stillwater, OK · *2017 - 2018*
+- Mentored students on topics including coding language basics, recursion, and software-development life cycles
+- Implemented metacognition awareness during office hours to facilitate healthy study habits
+- Provided feedback to enhance coding practices and promote secure software development
 
-### Repair Technician
-**uBreakiFix** · Lone Tree, CO · *2015 - 2017*
+### Web Developer & Business Owner
+
+**SproutedWeb** · Boulder, CO · _June 2018 - September 2021_
+
+- Co-founded and later sold my portion of a web development business; built and maintained client sites while
+  managing operations, budgeting, and delivery across concurrent engagements
 
 ---
 
 ## Speaking
 
-**DevOpsDays Denver 2025** · Denver, CO · *August 2025*
+**National Artificial Intelligence Research Resource (NAIRR)** · Arlington, VA · _March 2026_
 
-- Presented on collector infrastructure design in education and SOC pipelines ([watch talk](https://www.youtube.com/live/V-21TELKoqk?si=xeZ5Tm9Cnb4f-nn5&t=11449))
+- Presented AETHER, a declarative framework for building and evaluating early-stage multi-agent LLM systems.
+
+**MSU Denver Undergraduate Research Conference 2026** · Denver, CO · _April 2026_
+
+- Presented AETHER and AEGIS, as adversarial testing suite for measuring how system topology affects vulnerability.
+
+**MSU Denver Honors Thesis Symposium** · Denver, CO · _May 2026_
+
+- Presented AETHER, AEGIS, and preliminary findings on how multi-agent topology impacts susceptibility to adversarial attacks.
 
 ---
 
 ## Open Source & Projects
 
-### Home Lab
+### [AETHER & AEGIS](https://github.com/msu-denver/bili-core)
 
-**Kubernetes · Helm · ArgoCD · Prometheus**
+**Python · LangChain · LangGraph · YAML**
 
-- Self-hosted multi-node Kubernetes cluster for testing infrastructure patterns and running personal workloads.
+Honors thesis tooling extending BiliCore. AETHER declaratively builds multi-agent systems across various topologies, while AEGIS runs standardized one-shot adversarial attack suites to measure how agent topology impacts system vulnerability.
 
-### [Ubiquitous Cube Game](https://github.com/Xata/ubiquitous-cube-game)
+### [Bounded Kubernetes AI Agent](https://github.com/MonRos3/bounded-agent-k8s)
 
-**Python · OpenGL · NumPy · ModernGL**
+**Python · Kubernetes · Kubescape · Ollama · MiniStack · MiniKube · Docker**
 
-A voxel engine with procedural terrain generation in Python + OpenGL.
-
-### [SWBF2 v1.3 Patch Linux Patcher](https://github.com/Xata/swbf2-v13-linux-patcher)
-
-**Bash · Linux Gaming · Automation**
-
-Automated patch installation script enabling Windows-only Star Wars Battlefront II (2005) mods to work on Linux systems, using xdelta3 binary patching and 7z archives.
-
-### Open Source Contributions
-
-**Fluent Bit (CNCF)**
-
-- Created documentation for the GPU metrics plugin. [PR #2112](https://github.com/fluent/fluent-bit-docs/pull/2112)
-- Fixed sources list URL referencing Ubuntu instead of Debian. [PR #2028](https://github.com/fluent/fluent-bit-docs/pull/2028)
-
-**OpenSearch**
-
-- Corrected JSON code-block rendering. [PR #11217](https://github.com/opensearch-project/documentation-website/pull/11217)
-
-**OpenRCT2**
-
-- Replaced monolithic function with object-oriented DiagBlockedSegments class. [PR #20961](https://github.com/OpenRCT2/OpenRCT2/pull/20961)
+A bounded AI agent for cluster operations where the model proposes actions but a deterministic safety gate decides what executes, with automatic rollback on regression and an independent SOC 2 posture check.
 
 ---
 
 ## Education
 
 **Metropolitan State University of Denver**
-Bachelor of Science in Computer Information Systems · *2019 - 2023 (Graduated)*
-
-**Community College of Denver**
-Associate of Applied Science in Computer Information Systems · *2015 - 2016 (Graduated)*
+Bachelor of Science in Computer Science · _2022 - 2026 (Graduated)_
 
 ---
 
 ## Certifications
 
 **CompTIA PenTest+** · February 2025
-[View Credential](https://www.credly.com/badges/e17b96f6-d8e1-4bbc-a72b-0accb7a39709)
+[View Credential](https://www.credly.com/badges/5eaf1446-01ba-4167-a25e-57d44f06ffdc/)
 
 **CompTIA CySA+** · February 2025
-[View Credential](https://www.credly.com/badges/91a25c38-06a6-4029-bad8-74009e5bec6a)
+[View Credential](https://www.credly.com/badges/3a2d47b1-969d-4658-82b5-f5fb2d9969e2/)
 
-**GIAC Global Industrial Cyber Security Professional (GICSP)** · December 2024
-[View Credential](https://www.credly.com/badges/5b7a467f-78d9-4113-b2d8-ef1554016ff9)
+**CompTIA A+** · July 2024
+[View Credential](https://www.credly.com/badges/4c4f1317-2bf3-48f3-b133-2558b063b935/)
 
 **Nvidia Deep Learning Fundamentals** · May 2024
-[View Credential](https://learn.nvidia.com/certificates?id=pKPfpdozTNehK71oz4H60g)
+[View Credential](https://learn.nvidia.com/certificates?id=bPvbtuttRAiCG7UsXrkv2w)

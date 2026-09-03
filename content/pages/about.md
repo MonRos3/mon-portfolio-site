@@ -1,25 +1,25 @@
 title: About
-date: 2024-03-24
-modified: 2025-01-10
+date: 2026-09-02
+modified: 2026-09-02
 status: published
 
-Maciej's Dev Blog
-=================
+# Monica's Dev X Sec Blog
 
-![Paradise Divide, Crested Butte]({static}/img/paradise_divide_cb.jpg)
+![Colorado Mountains](./img/colorado-hike.JPG)
 
 ## About this website
+
 This portfolio website serves as a central hub for showcasing my projects, experience, and professional skills. Sections included are:
 
 - Resume: Details about my professional experience, including roles and responsibilities.
-- Blog: Posts I have written. These include guides about technologies I use.
+- Blog: Posts I have written. These include guides about technologies I use and some thoughts about cybersecurity.
 
 ## About me
-Hello! My name is Maciej. I'm a software developer in Colorado. Currently, I'm serving the Cybersecurity Platform Architect at the Cybersecurity Center at MSU Denver. I'm currently creating a lot of Helm charts and transitioning a SOC ran by students to be running on Kubernetes. In addition to writing A LOT of .yaml files, I also teach CompTIA A+ (a callback to my experience as an IT professional). My favorite way to teach is when I lead mini-workshops to teach the fundamentals of Kubernetes and other Cloud Native Computing Foundation projects. Recently in December of 2024, I became a GIAC certified Global Industrial Cyber Security Professional.
 
+Hello! My name is Monica. I'm a software developer in Colorado. I recently graduated from Metropolitan State University of Denver with a degree in Computer Science. I am now looking for a full-time role in tech that will allow me to pursue my passion for building and securing systems.
 
 You'll find links to my GitHub and my LinkedIn profile:
 
-[![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Xata)
+[![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/MonRos3)
 
-[![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/maciejwal/)
+[![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/monicaball303/)
