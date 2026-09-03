@@ -1,3 +1,0 @@
-# Blanket Disallow
-User-agent: *
-Disallow: /
