@@ -1,6 +1,6 @@
-# mwal.dev
+# Repo origin: mwal.dev
 
-This repository contains the source code for my portfolio website at [mwal.dev](https://mwal.dev).
+This repository contains the source code for Xata's portfolio website at [mwal.dev](https://mwal.dev).
 
 ![GitHub top language](https://img.shields.io/github/languages/top/Xata/mw-website-dev?style=for-the-badge)
 ![GitHub repo size](https://img.shields.io/github/repo-size/Xata/mw-website-dev?style=for-the-badge)
@@ -17,9 +17,11 @@ Personal portfolio site with my blog and a resume page. Built with 200ish lines 
 ## Development
 
 **Prerequisites:**
+
 - Python 3.13.x
 
 **Setup:**
+
 ```bash
 python -m venv .venv
 source .venv/bin/activate  # macOS/Linux
@@ -27,6 +29,7 @@ pip install -r requirements.txt
 ```
 
 **Build and serve locally:**
+
 ```bash
 make build    # Build the site
 make serve    # Serve at http://localhost:8000
@@ -59,6 +62,7 @@ So you want to use this for your own website? Cool! Here's how to get started.
 ### What You'll Need
 
 First, install the only dependency:
+
 ```bash
 pip install markdown
 ```
@@ -68,6 +72,7 @@ That's literally it. One package.
 ### Setting Up Your Project
 
 Create this folder structure:
+
 ```
 your-site/
 ├── content/
@@ -83,16 +88,17 @@ your-site/
 ### The Template
 
 Your template file (`templates/base.html`) needs two placeholders:
+
 ```html
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <title>{{ title }}</title>
     <!-- Your CSS goes here -->
-</head>
-<body>
+  </head>
+  <body>
     {{ content }}
-</body>
+  </body>
 </html>
 ```
 
@@ -101,6 +107,7 @@ The script replaces `{{ title }}` with your page title and `{{ content }}` with 
 ### Writing Content
 
 Articles go in `content/articles/` and look like this:
+
 ```markdown
 Title: My First Post
 Date: 2024-03-24 20:19
@@ -111,6 +118,7 @@ Your content starts here...
 ```
 
 Pages go in `content/pages/` and look like this:
+
 ```markdown
 title: About Me
 date: 2024-01-01
@@ -123,11 +131,13 @@ The metadata format is just `key: value`. The script parses everything before th
 ### Images
 
 Use `{static}` tags when referencing images:
+
 ```markdown
 ![My photo]({static}/img/photo.jpg)
 ```
 
 The script converts this to the correct relative path automatically:
+
 - Articles (in subdirectory): `../img/photo.jpg`
 - Pages (in root): `./img/photo.jpg`
 
@@ -136,6 +146,7 @@ This way you don't have to remember different paths for different page types.
 ### Building Your Site
 
 Run this:
+
 ```bash
 python build.py
 ```
@@ -143,6 +154,7 @@ python build.py
 Your site gets generated in `output/`. That's it. You're done.
 
 The script:
+
 - Cleans the output directory
 - Copies your images and static files
 - Processes all your Markdown files
@@ -159,7 +171,7 @@ The script:
 
 ### Customizing
 
-Edit ```build.py```. The functions are commented and the whole file is readable in about 10 minutes.
+Edit `build.py`. The functions are commented and the whole file is readable in about 10 minutes.
 
 ### Limitations
 
@@ -174,3 +186,7 @@ Thank you for checking this out!!!
 ## License
 
 See [LICENSE](LICENSE) for details.
+
+# Repo updates: MonRos3
+
+Now that I've forked all that awesome work, it points to _my_ portfolio website: [monicaball.com](https://monicaball.com). Thank you Xata for the awesome codebase!
