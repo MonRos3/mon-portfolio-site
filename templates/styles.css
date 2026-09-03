@@ -59,11 +59,11 @@
     --space-5: 40px;
     --space-6: 64px;
 
-    --font-size-sm: 15px;
-    --font-size-base: 17px;
-    --font-size-lg: 20px;
-    --font-size-h3: 22px;
-    --font-size-h2: 28px;
+    --font-size-sm: 0.9375rem;   /* 15px */
+    --font-size-base: 1.0625rem; /* 17px */
+    --font-size-lg: 1.25rem;     /* 20px */
+    --font-size-h3: clamp(1.25rem, 1.19rem + 0.27vw, 1.375rem);  /* 20px floor -> 22px ceiling */
+    --font-size-h2: clamp(1.5rem, 1.38rem + 0.54vw, 1.75rem);    /* 24px floor -> 28px ceiling */
     --font-size-hero: clamp(2rem, 1.5rem + 2vw, 2.5rem);
 
     --max-width: 1100px;
@@ -241,7 +241,7 @@ hr {
 
 h1 {
     font-size: var(--font-size-hero);
-    margin-bottom: 8px;
+    margin-bottom: var(--space-2);
     font-weight: 600;
     letter-spacing: -0.5px;
     color: var(--text);
@@ -249,8 +249,8 @@ h1 {
 
 h2 {
     font-size: var(--font-size-h2);
-    margin-top: 40px;
-    margin-bottom: 16px;
+    margin-top: var(--space-5);
+    margin-bottom: var(--space-3);
     font-weight: 600;
     letter-spacing: -0.3px;
     color: var(--text);
@@ -263,7 +263,7 @@ h3 {
     font-weight: 600;
     letter-spacing: -0.2px;
     color: var(--text);
-    transition: transform 0.2s ease;
+    transition: transform var(--transition-fast);
 }
 
 h3:hover {
@@ -288,8 +288,8 @@ nav button#theme-toggle {
     text-decoration: none;
     font-size: var(--font-size-sm);
     font-weight: 600;
-    padding: 6px 16px;
-    border-radius: 12px;
+    padding: 6px var(--space-3);
+    border-radius: var(--radius-md);
     display: inline-flex;
     align-items: center;
     gap: 6px;
@@ -305,7 +305,7 @@ nav button#theme-toggle {
         0 -1px 2px rgba(73, 165, 191, 0.15) inset,
         0 3px 8px rgba(73, 165, 191, 0.18);
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
-    transition: all 0.2s ease;
+    transition: all var(--transition-fast);
 }
 
 nav button#theme-toggle {
@@ -347,7 +347,7 @@ nav button#theme-toggle:active {
 a {
     color: var(--accent);
     text-decoration: none;
-    transition: color 0.2s ease;
+    transition: color var(--transition-fast);
 }
 
 a:hover {
@@ -357,7 +357,7 @@ a:hover {
 a:focus-visible {
     outline: 2px solid rgba(73, 165, 191, 0.8);
     outline-offset: 2px;
-    border-radius: 4px;
+    border-radius: var(--radius-sm);
 }
 
 /* Separate rule so nav a keeps its own border-radius */
@@ -365,7 +365,7 @@ nav a:focus-visible,
 nav button#theme-toggle:focus-visible {
     outline: 2px solid rgba(73, 165, 191, 0.8);
     outline-offset: 2px;
-    border-radius: 12px;
+    border-radius: var(--radius-md);
     box-shadow:
         0 1px 0 rgba(255, 255, 255, 0.6) inset,
         0 0 0 3px rgba(73, 165, 191, 0.25);
@@ -390,7 +390,7 @@ nav button#theme-toggle:focus-visible {
 .article-meta {
     color: var(--color-text-muted);
     font-size: var(--font-size-sm);
-    margin-bottom: 24px;
+    margin-bottom: var(--space-4);
     font-weight: 400;
 }
 
@@ -399,10 +399,10 @@ nav button#theme-toggle:focus-visible {
 }
 
 .article-list li {
-    margin-bottom: 24px;
+    margin-bottom: var(--space-4);
     padding-bottom: 20px;
     border-bottom: 1px solid var(--color-border);
-    transition: transform 0.2s ease;
+    transition: transform var(--transition-fast);
 }
 
 .article-list li:last-child {
@@ -417,7 +417,7 @@ nav button#theme-toggle:focus-visible {
     color: var(--color-text-muted);
     font-size: var(--font-size-sm);
     display: block;
-    margin-bottom: 4px;
+    margin-bottom: var(--space-1);
     font-weight: 400;
 }
 
@@ -432,7 +432,7 @@ img {
     max-width: 100%;
     height: auto;
     margin: 32px 0;
-    border-radius: 16px;
+    border-radius: var(--radius-lg);
     box-shadow:
         0 4px 16px rgba(73, 165, 191, 0.15),
         0 12px 40px rgba(0, 0, 0, 0.1);
@@ -444,10 +444,10 @@ pre {
     backdrop-filter: blur(12px) saturate(150%);
     -webkit-backdrop-filter: blur(12px) saturate(150%);
     border: 1px solid rgba(255, 255, 255, 0.6);
-    border-radius: 12px;
+    border-radius: var(--radius-md);
     padding: 20px;
     overflow-x: auto;
-    margin: 24px 0;
+    margin: var(--space-4) 0;
     font-family: "SF Mono", Monaco, "Cascadia Code", "Courier New", monospace;
     font-size: 14px;
     line-height: 1.6;
@@ -458,10 +458,10 @@ pre {
 
 code {
     font-family: "SF Mono", Monaco, "Cascadia Code", "Courier New", monospace;
-    font-size: 15px;
+    font-size: var(--font-size-sm);
     background: rgba(220, 235, 245, 0.4);
     padding: 3px 6px;
-    border-radius: 4px;
+    border-radius: var(--radius-sm);
     color: var(--color-code-text);
 }
 
@@ -474,14 +474,14 @@ pre code {
 /* Glass callout blockquote */
 blockquote {
     border-left: none;
-    padding: 20px 20px 20px 24px;
-    margin: 24px 0;
+    padding: 20px 20px 20px var(--space-4);
+    margin: var(--space-4) 0;
     color: var(--color-blockquote-text);
     font-style: italic;
     position: relative;
     background: rgba(200, 230, 245, 0.3);
     border: 1px solid rgba(255, 255, 255, 0.5);
-    border-radius: 12px;
+    border-radius: var(--radius-md);
     box-shadow:
         0 1px 0 rgba(255, 255, 255, 0.7) inset,
         0 2px 8px rgba(73, 165, 191, 0.08);
@@ -505,11 +505,11 @@ blockquote::before {
 ul:not(.article-list),
 ol {
     margin: 20px 0;
-    padding-left: 24px;
+    padding-left: var(--space-4);
 }
 
 li {
-    margin-bottom: 8px;
+    margin-bottom: var(--space-2);
 }
 
 footer {
@@ -553,6 +553,16 @@ footer::before {
 
 .content {
     animation: fadeIn 0.4s ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
 }
 
 [data-theme="dark"] ::selection {
@@ -722,15 +732,7 @@ footer::before {
 @media (max-width: 768px) {
     .container {
         margin: var(--space-5) var(--space-2);
-        padding: 30px 24px;
-    }
-
-    h2 {
-        font-size: 24px;
-    }
-
-    h3 {
-        font-size: 20px;
+        padding: 30px var(--space-4);
     }
 
     /* Revert to native scrollbar on touch devices */
@@ -752,8 +754,8 @@ footer::before {
         top: 0;
         right: 0;
         z-index: 10;
-        padding: 8px;
-        border-radius: 12px;
+        padding: var(--space-2);
+        border-radius: var(--radius-md);
         background: linear-gradient(to bottom,
                 rgba(255, 255, 255, 0.9) 0%,
                 rgba(220, 240, 250, 0.7) 48%,
@@ -790,27 +792,30 @@ footer::before {
     nav {
         display: flex;
         flex-direction: column;
-        gap: 8px;
+        gap: var(--space-2);
         max-height: 0;
         overflow: hidden;
         opacity: 0;
         margin-top: 0;
         transition: max-height 0.35s ease, opacity 0.3s ease, margin-top 0.35s ease;
-        padding: 0 4px;
+        padding: 0 var(--space-1);
     }
 
+    /* max-height is a fixed estimate for the animated expand/collapse — it must
+       stay larger than the expanded nav's natural height or content will clip.
+       Raise this if nav items are added. */
     .nav-toggle:checked~nav {
         max-height: 320px;
         opacity: 1;
         margin-top: 20px;
-        padding: 16px;
+        padding: var(--space-3);
         background: linear-gradient(to bottom,
                 rgba(220, 235, 245, 0.9) 0%,
                 rgba(195, 220, 235, 0.7) 50%,
                 rgba(175, 210, 230, 0.6) 51%,
                 rgba(200, 225, 240, 0.8) 100%);
         border: 1px solid rgba(147, 206, 222, 0.4);
-        border-radius: 12px;
+        border-radius: var(--radius-md);
         box-shadow:
             0 1px 0 rgba(255, 255, 255, 0.7) inset,
             0 4px 16px rgba(73, 165, 191, 0.15);
@@ -820,7 +825,7 @@ footer::before {
     nav button#theme-toggle {
         width: 100%;
         justify-content: center;
-        padding: 10px 16px;
+        padding: 10px var(--space-3);
         font-size: 16px;
     }
 }
