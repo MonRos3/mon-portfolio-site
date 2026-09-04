@@ -127,12 +127,20 @@ body {
     padding: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    min-height: 100lvh;
 }
 
 body::before {
     content: '';
     position: fixed;
     inset: 0;
+    height: 100vh;
+    height: 100lvh;
     z-index: -1;
     background: linear-gradient(to top,
             var(--grad-1) 0%,
