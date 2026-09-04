@@ -589,6 +589,15 @@ footer::before {
     inset 0 -1px 0 rgba(255, 255, 255, 0.45);
 }
 
+footer a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+footer a:hover {
+  color: var(--text);
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;

@@ -4,7 +4,7 @@ Date: 2026-09-02 20:56
 Category: blog
 Tags: markdown, blog, first
 
-![Mountains in Colorado](./img/colorado-hike.JPG)
+![Mountains in Colorado]({static}/img/colorado-hike.JPG)
 
 ## About this website
 

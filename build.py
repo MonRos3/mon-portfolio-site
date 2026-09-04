@@ -331,12 +331,12 @@ def build_blog_index(articles: List[Dict], output_dir: Path, template_path: str)
     in reverse chronological order (newest first).
 
     The page includes:
-    - A "Blog" heading
+    - A "Writing" heading
     - List of articles with dates and titles
     - Links to each article
 
     Example output structure:
-        <h1>Blog</h1>
+        <h1>Writing</h1>
         <ul class="article-list">
             <li>
                 <span class="article-date">2024-03-24</span>
@@ -364,7 +364,7 @@ def build_blog_index(articles: List[Dict], output_dir: Path, template_path: str)
     )
 
     # Build the HTML content for the blog index
-    content = '<h1>Blog</h1>\n'
+    content = '<h1>Writing</h1>\n'
     content += '<ul class="article-list">\n'
 
     for article in sorted_articles:
@@ -378,7 +378,7 @@ def build_blog_index(articles: List[Dict], output_dir: Path, template_path: str)
     content += '</ul>\n'
 
     # Wrap in template and write to file
-    html = render_template(template_path, 'Blog', content)
+    html = render_template(template_path, 'Writing', content)
 
     with open(output_dir / 'blog.html', 'w', encoding='utf-8') as f:
         f.write(html)
