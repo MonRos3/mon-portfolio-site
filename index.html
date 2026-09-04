@@ -1,11 +1,272 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0; url=/resume.html">
-    <title>Redirecting...</title>
-</head>
-<body>
-    <p>Redirecting to <a href="/resume.html">resume</a>...</p>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      (function () {
+        var stored = localStorage.getItem("theme");
+        var theme = stored || "dark";
+        document.documentElement.setAttribute("data-theme", theme);
+      })();
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home - Monica's Portfolio</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <h1>
+          <a href="/index.html" style="color: inherit; text-decoration: none"
+            >Monica Ball</a
+          >
+        </h1>
+        <input
+          type="checkbox"
+          id="nav-toggle"
+          class="nav-toggle"
+          aria-label="Toggle navigation menu"
+        />
+        <label for="nav-toggle" class="nav-toggle-label" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+        <nav aria-label="Main navigation">
+          <a href="/index.html" aria-label="Home">
+            <svg
+              aria-hidden="true"
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+              <polyline points="9 22 9 12 15 12 15 22" />
+            </svg>
+            Home
+          </a>
+          <a href="/index.html#projects" aria-label="Projects">
+            <svg
+              aria-hidden="true"
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"
+              />
+            </svg>
+            Projects
+          </a>
+          <a href="/blog.html" aria-label="Writing">
+            <svg
+              aria-hidden="true"
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M12 20h9" />
+              <path
+                d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"
+              />
+            </svg>
+            Writing
+          </a>
+          <a href="/resume.html" aria-label="Resumé">
+            <svg
+              aria-hidden="true"
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+              />
+              <polyline points="14 2 14 8 20 8" />
+              <line x1="16" y1="13" x2="8" y2="13" />
+              <line x1="16" y1="17" x2="8" y2="17" />
+              <polyline points="10 9 9 9 8 9" />
+            </svg>
+            Resumé
+          </a>
+          <button
+            type="button"
+            id="theme-toggle"
+            aria-label="Switch to dark theme"
+          >
+            <svg
+              class="icon-sun"
+              aria-hidden="true"
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="5" />
+              <line x1="12" y1="1" x2="12" y2="3" />
+              <line x1="12" y1="21" x2="12" y2="23" />
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+              <line x1="1" y1="12" x2="3" y2="12" />
+              <line x1="21" y1="12" x2="23" y2="12" />
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+            </svg>
+            <svg
+              class="icon-moon"
+              aria-hidden="true"
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+            </svg>
+          </button>
+        </nav>
+      </header>
+
+      <main class="content"><h1>Hi, I'm Monica.</h1>
+<p class="hero-tagline">I build and secure systems; AI, infrastructure,
+</br>
+and the messy places in between.</p>
+
+<p class="hero-lead">I love building things, and I'm pulled by the puzzle of how they break and where. Give me a problem and I'll keep at it until my curiosity is satisfied... which can sometimes take a while.</p>
+
+<section id="projects">
+<h2>Featured Projects</h2>
+<div class="project-grid">
+<article class="project-card">
+<h3><a href="https://github.com/msu-denver/bili-core/tree/develop/bili/aether" target="_blank" rel="noopener noreferrer">AETHER</a></h3>
+<p class="project-hook">A tool for building multi-agent AI systems via YAML.</p>
+<div class="project-badges">
+    <span class="badge badge-python">Python</span>
+    <span class="badge">Multi-Agent LLM</span>
+    <span class="badge">YAML</span>
+  </div>
+<p class="project-outcome">Declarative framework (part of my honors thesis) that builds a range of agent topologies from a config file, creating reproducible environments for studying whether these systems can be secured. 100% pass across 100 baseline tests.</p>
+<div class="project-links">
+    <a href="https://github.com/msu-denver/bili-core/tree/develop/bili/aether" target="_blank" rel="noopener noreferrer">View Repo</a>
+  </div>
+</article>
+<article class="project-card">
+<h3><a href="https://github.com/msu-denver/bili-core" target="_blank" rel="noopener noreferrer">AEGIS</a></h3>
+<p class="project-hook">An adversarial suite that attacks what AETHER builds.</p>
+<div class="project-badges">
+    <span class="badge badge-python">Python</span>
+    <span class="badge badge-security">Adversarial Testing</span>
+    <span class="badge">LLM</span>
+  </div>
+<p class="project-outcome">The offensive half of my thesis; runs standardized attacks (prompt injection, jailbreak, memory poisoning, and more) across topologies. 798 tests surfaced that subtle, low-severity attacks beat blatant ones.</p>
+<div class="project-links">
+    <a href="https://github.com/msu-denver/bili-core" target="_blank" rel="noopener noreferrer">View Repo</a>
+  </div>
+</article>
+<article class="project-card">
+<h3><a href="https://github.com/MonRos3/bounded-agent-k8s" target="_blank" rel="noopener noreferrer">AI Agent for Kubernetes</a></h3>
+<p class="project-hook">An AI agent that operates a real cluster; safely.</p>
+<div class="project-badges">
+    <span class="badge badge-python">Python</span>
+    <span class="badge badge-k8s">Kubernetes</span>
+    <span class="badge badge-security">Kubescape</span>
+  </div>
+<p class="project-outcome">The model proposes actions; a deterministic gate, not the model, decides what runs. Auto-rollback on regression, plus an independent SOC 2 posture check. Safety that holds even when the model is wrong.</p>
+<div class="project-links">
+    <a href="https://github.com/MonRos3/bounded-agent-k8s" target="_blank" rel="noopener noreferrer">View Repo</a>
+  </div>
+</article>
+</div>
+</section>
+<section>
+<h2>Certifications</h2>
+<div class="cert-strip">
+  <a class="cert-chip" href="https://www.credly.com/badges/5eaf1446-01ba-4167-a25e-57d44f06ffdc/" target="_blank" rel="noopener noreferrer">CompTIA PenTest+</a>
+  <a class="cert-chip" href="https://www.credly.com/badges/3a2d47b1-969d-4658-82b5-f5fb2d9969e2/" target="_blank" rel="noopener noreferrer">CompTIA CySA+</a>
+  <a class="cert-chip" href="https://www.credly.com/badges/4c4f1317-2bf3-48f3-b133-2558b063b935/" target="_blank" rel="noopener noreferrer">CompTIA A+</a>
+  <a class="cert-chip" href="https://learn.nvidia.com/certificates?id=bPvbtuttRAiCG7UsXrkv2w" target="_blank" rel="noopener noreferrer">NVIDIA Deep Learning Fundamentals</a>
+</div>
+</section></main>
+
+      <footer>
+        <p>
+          <a href="mailto:monicaball303@gmail.com">Email</a>
+          ·
+          <a
+            href="https://github.com/MonRos3"
+            target="_blank"
+            rel="noopener noreferrer"
+            >GitHub</a
+          >
+          ·
+          <a
+            href="https://www.linkedin.com/in/monicaball303/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >LinkedIn</a
+          >
+        </p>
+        <p>
+          &copy; 2026 Monica Ball. Built with Python and a forked repo from
+          <a
+            href="https://github.com/Xata"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Xata</a
+          >.
+        </p>
+      </footer>
+    </div>
+    <script>
+      (function () {
+        var btn = document.getElementById("theme-toggle");
+        function labelFor(theme) {
+          return theme === "dark"
+            ? "Switch to light theme"
+            : "Switch to dark theme";
+        }
+        btn.setAttribute(
+          "aria-label",
+          labelFor(document.documentElement.getAttribute("data-theme"))
+        );
+        btn.addEventListener("click", function () {
+          var next =
+            document.documentElement.getAttribute("data-theme") === "dark"
+              ? "light"
+              : "dark";
+          document.documentElement.setAttribute("data-theme", next);
+          localStorage.setItem("theme", next);
+          btn.setAttribute("aria-label", labelFor(next));
+        });
+      })();
+    </script>
+  </body>
 </html>
