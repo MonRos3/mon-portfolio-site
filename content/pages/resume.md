@@ -1,9 +1,9 @@
-title: Resume
+title: Resumé
 date: 2026-09-02
 modified: 2026-09-02
 status: published
 
-# Resume
+# Resumé
 
 Software Developer · Security Practitioner · Denver, CO · Open to Remote, Hybrid, or On-Site
 
