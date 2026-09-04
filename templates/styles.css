@@ -97,6 +97,9 @@
   --radius-md: 12px;
   --radius-lg: 16px;
   --transition-fast: 0.2s ease;
+
+  --cert-fg: #e8e8e8;
+  --cert-border: #666;
 }
 
 [data-theme="light"] {
@@ -116,6 +119,9 @@
   --color-border: #e5e5e7;
   --color-code-text: #c7254e;
   --color-blockquote-text: #4a6670;
+
+  --cert-fg: #1a1a1a;
+  --cert-border: #888;
 }
 
 ::selection {
@@ -361,7 +367,8 @@ nav button#theme-toggle {
 }
 
 nav a:hover,
-nav button#theme-toggle:hover {
+nav button#theme-toggle:hover,
+.cert-chip:hover {
   text-decoration: none;
   background: linear-gradient(
     to bottom,
@@ -682,7 +689,8 @@ footer a:hover {
 }
 
 [data-theme="dark"] nav a:hover,
-[data-theme="dark"] nav button#theme-toggle:hover {
+[data-theme="dark"] nav button#theme-toggle:hover,
+[data-theme="dark"] .cert-chip:hover {
   background: linear-gradient(
     to bottom,
     rgba(251, 191, 36, 0.35) 0%,
@@ -787,9 +795,164 @@ footer a:hover {
     0 4px 16px rgba(0, 0, 0, 0.3);
 }
 
+/* Hero */
+.hero-tagline {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+}
+
+.hero-lead {
+  max-width: 50%;
+}
+
+/* Featured projects grid — breakpoint-free reflow */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--space-4);
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  background: var(--surface-solid);
+  border: 1px solid var(--surface-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4) 15px;
+  transition: transform var(--transition-fast);
+}
+
+.project-card:hover {
+  transform: translateY(-2px);
+}
+
+.project-card h3 {
+  margin: 0;
+}
+
+.project-hook {
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
+.project-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1);
+}
+
+.project-outcome {
+  font-size: var(--font-size-sm);
+}
+
+.project-links {
+  display: flex;
+  gap: var(--space-3);
+  margin-top: auto;
+}
+
+/* Tech badges */
+.badge {
+  display: inline-block;
+  padding: 0.25em 0.7em;
+  margin: 0.15em 0.15em 0.15em 0;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #fff;
+  background: var(--badge-default, #555);
+  border-radius: 4px;
+  vertical-align: middle;
+}
+
+/* languages */
+.badge-python {
+  background: #3776ab;
+}
+.badge-bash {
+  background: #4eaa25;
+}
+.badge-js {
+  background: #f7df1e;
+  color: #222;
+}
+
+/* AI / LLM stack */
+.badge-langchain {
+  background: #1c3c3c;
+}
+.badge-langgraph {
+  background: #2f6e4f;
+}
+.badge-ollama {
+  background: #000000;
+}
+.badge-chromadb {
+  background: #ff6b4a;
+}
+
+/* apps / infra */
+.badge-streamlit {
+  background: #ff4b4b;
+}
+.badge-docker {
+  background: #2496ed;
+}
+.badge-k8s {
+  background: #326ce5;
+}
+.badge-linux {
+  background: #fcc624;
+  color: #222;
+}
+
+/* security */
+.badge-security {
+  background: #c1121f;
+}
+
+/* dark-mode visibility fix: the near-black entries disappear against the
+   dark theme's near-black card surface without a visible edge */
+[data-theme="dark"] .badge-ollama,
+[data-theme="dark"] .badge-langchain {
+  border: 1px solid var(--surface-border);
+}
+
+/* Cert chips */
+.cert-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.cert-chip {
+  display: inline-block;
+  padding: 0.3em 0.8em;
+  margin: 0.2em 0.2em 0.2em 0;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--cert-fg, #1a1a1a);
+  background: transparent;
+  border: 1.5px solid var(--cert-border, #888);
+  border-radius: 6px;
+  vertical-align: middle;
+}
+
+.cert-chip-progress {
+  border-style: dashed;
+  opacity: 0.85;
+}
+
 @media (max-width: 768px) {
   .container {
     padding: 30px var(--space-4);
+  }
+
+  .hero-lead {
+    max-width: 100%;
   }
 
   /* Revert to native scrollbar on touch devices */
