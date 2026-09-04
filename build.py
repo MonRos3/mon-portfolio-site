@@ -384,42 +384,6 @@ def build_blog_index(articles: List[Dict], output_dir: Path, template_path: str)
         f.write(html)
 
 
-def build_home_page(output_dir: Path, template_path: str):
-    """
-    Build the home page (index.html).
-
-    This implementation creates a redirect to /resume.html, but you can customize
-    this to do whatever you want:
-    - Show a landing page
-    - Display recent blog posts
-    - Show your portfolio
-    - Redirect to your blog (change url=/blog.html)
-
-    Current behavior: Instant redirect to resume.html using meta refresh tag.
-
-    Args:
-        output_dir: Directory to write index.html to (usually output/)
-        template_path: Path to the HTML template (not used for redirect, but kept for consistency)
-    """
-    # Simple HTML with meta refresh for instant redirect
-    # The "0" means redirect immediately (0 seconds delay)
-    # Change the url= value to redirect somewhere else
-    content = '''<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0; url=/resume.html">
-    <title>Redirecting...</title>
-</head>
-<body>
-    <p>Redirecting to <a href="/resume.html">resume</a>...</p>
-</body>
-</html>'''
-
-    with open(output_dir / 'index.html', 'w', encoding='utf-8') as f:
-        f.write(content)
-
-
 def build_404_page(output_dir: Path, template_path: str):
     """
     Build the 404 error page.
@@ -458,10 +422,9 @@ def main():
     2. Clean and recreate output directory
     3. Copy static assets (images, fonts, CSS, etc.)
     4. Process all blog articles
-    5. Process all static pages
+    5. Process all static pages (including index.md -> the home page)
     6. Generate blog index
-    7. Generate home page
-    8. Generate 404 page
+    7. Generate 404 page
 
     Directory structure expected:
         build.py                    (this file)
@@ -553,10 +516,6 @@ def main():
     # Build the blog index page (list of all articles)
     print('Building blog index...')
     build_blog_index(articles, output_dir, template_path)
-
-    # Build the home page
-    print('Building home page...')
-    build_home_page(output_dir, template_path)
 
     # Build the 404 error page
     print('Building 404 page...')
