@@ -146,14 +146,9 @@ body {
   min-height: 100lvh;
 }
 
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  height: 100vh;
-  height: 100lvh;
-  z-index: -1;
-  background: linear-gradient(
+html {
+  background-color: var(--grad-1);
+  background-image: linear-gradient(
     to top,
     var(--grad-1) 0%,
     var(--grad-2) 25%,
@@ -162,10 +157,12 @@ body::before {
     var(--grad-5) 88%,
     var(--grad-6) 100%
   );
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
-[data-theme="light"] body::before {
-  background: linear-gradient(
+[data-theme="light"] {
+  background-image: linear-gradient(
     to top,
     var(--grad-1) 0%,
     var(--grad-2) 12%,
