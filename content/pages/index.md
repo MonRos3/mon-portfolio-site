@@ -5,9 +5,7 @@ status: published
 
 # Hi, I'm Monica.
 
-<h3 class="hero-tagline">I build and secure systems; AI, infrastructure,
-</br>
-and the messy places in between.</h3>
+<h3 class="hero-tagline">I build and secure systems; AI, infrastructure, and the messy places in between.</h3>
 
 <p class="hero-lead">I love building things, and I'm pulled by the puzzle of how they break and where. 
 Give me a problem and I'll keep at it until my curiosity is satisfied... which can sometimes take a while.</p>
