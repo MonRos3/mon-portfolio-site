@@ -799,10 +799,11 @@ footer a:hover {
 .hero-tagline {
   font-size: var(--font-size-lg);
   font-weight: 600;
+  max-width: 50%;
 }
 
 .hero-lead {
-  max-width: 50% !important;
+  max-width: 50%;
 }
 
 /* Featured projects grid — breakpoint-free reflow */
@@ -949,6 +950,10 @@ footer a:hover {
 @media (max-width: 768px) {
   .container {
     padding: 30px var(--space-4);
+  }
+
+  .hero-tagline {
+    max-width: 100%;
   }
 
   .hero-lead {
